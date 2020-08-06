@@ -2,6 +2,7 @@
   @media (max-width: 560px) { @content; }
 }
 
+@import 'animation-controls';
 @import 'color-controls';
 @import 'logo-form-controls';
 @import 'preview';

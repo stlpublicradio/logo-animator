@@ -3,13 +3,13 @@ import { setAnimation, setGradient } from './scripts'
 
 // Set Defaults
 const features = {
-  animation: 'stagger',
+  animation: 'pulse',
   colors: ['#237bbd'],
   form: 'black',
 }
 window.features = features
 
-setAnimation('stagger')  // default animation
+setAnimation('pulse')  // default animation
 setGradient(['#237bbd']) // default color
 
 // Add Event Listeners to Controls

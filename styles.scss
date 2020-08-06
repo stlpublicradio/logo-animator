@@ -2,9 +2,13 @@
 @import './styles/interface';
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'acumin-pro', system-ui, sans-serif;
   margin: 0;
   height: 100vh;
+}
+
+button {
+  font-family: inherit;
 }
 
 .hidden {
