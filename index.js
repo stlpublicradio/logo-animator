@@ -2,14 +2,12 @@
 import { setAnimation, setGradient } from './scripts'
 
 // Set Defaults
-const logo = document.querySelector('svg.logo')
-
 setAnimation('pulse')    // default animation
 setGradient(['#237bbd']) // default color
 
 // Add Event Listeners to Controls
 
-// Logo Forms (Should logo be Black or White)
+// Logo Forms (Should logo be Black or White?)
 const buttonFormBlack = document.querySelector('#form-black')
 const buttonFormWhite = document.querySelector('#form-white')
 const preview = document.querySelector('.logo-preview')
@@ -31,6 +29,7 @@ const animationButtons = document.querySelectorAll('#animation-controls button')
 
 const animations = [
   { name: 'animation-none', className: ''},
+  { name: 'animation-blink', className: 'blink'},
   { name: 'animation-pulse', className: 'pulse'},
 ]
 

@@ -1,0 +1,12 @@
+@keyframes blink {
+  0%  { opacity: 0; }
+  33% { opacity: 1; }
+}
+
+.blink .logo-bar {
+  animation-name: blink;
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
