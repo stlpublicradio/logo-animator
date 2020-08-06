@@ -24,6 +24,8 @@ buttonFormWhite.addEventListener('click', () => {
   buttonFormWhite.classList.add('active')
 })
 
+// Animation
+
 // Bar Color
 const colorButtons = document.querySelectorAll('#color-controls button')
 
@@ -55,20 +57,26 @@ const colors = [
   { name: 'color-deep-blue',        hex: ['#594f91'] },
   { name: 'color-pale-blue',        hex: ['#d4dcf0'] },
 
-  { name: 'gradient-blues',         hex: ['#237bbd', '#234093']                       },
-  { name: 'gradient-cools',         hex: ['#237bbd', '#234093', '#592059']            },
-  { name: 'gradient-warms',         hex: ['#592059', '#d62021', '#f26a5b']            },
-  { name: 'gradient-reds',          hex: ['#d62021', '#f26a5b']                       },
+  { name: 'gradient-blues',          hex: ['#237bbd', '#234093']                       },
+  { name: 'gradient-cools',          hex: ['#237bbd', '#234093', '#592059']            },
+  { name: 'gradient-warms',          hex: ['#592059', '#d62021', '#f26a5b']            },
+  { name: 'gradient-reds',           hex: ['#d62021', '#f26a5b']                       },
 
-  { name: 'gradient-dark-grey',     hex: ['#000000', '#231f20', '#808285']            },
-  { name: 'gradient-mid-grey',      hex: ['#231f20', '#808285', '#b1b3b6', '#e6e7e8'] },
-  { name: 'gradient-light-grey',    hex: ['#b1b3b6', '#e6e7e8', '#ffffff']            },
+  { name: 'gradient-dark-grey',      hex: ['#000000', '#231f20', '#808285']            },
+  { name: 'gradient-mid-grey',       hex: ['#231f20', '#808285', '#b1b3b6', '#e6e7e8'] },
+  { name: 'gradient-light-grey',     hex: ['#b1b3b6', '#e6e7e8', '#ffffff']            },
 
-  { name: 'gradient-magentas',      hex: ['#9a104f', '#e03669', '#fbd4da']            },
-  { name: 'gradient-cute-blues',    hex: ['#00abc3', '#90cef1', '#d4effc']            },
-  { name: 'gradient-oranges',       hex: ['#f26522', '#faa21b', '#edd232']            },
-  { name: 'gradient-greens',        hex: ['#006b71', '#639d48', '#b3ca2d']            },
-  { name: 'gradient-deep-blues',    hex: ['#24206e', '#594f91', '#d4dcf0']            },
+  { name: 'gradient-magentas',       hex: ['#9a104f', '#e03669', '#fbd4da']            },
+  { name: 'gradient-cute-blues',     hex: ['#00abc3', '#90cef1', '#d4effc']            },
+  { name: 'gradient-oranges',        hex: ['#f26522', '#faa21b', '#edd232']            },
+  { name: 'gradient-greens',         hex: ['#006b71', '#639d48', '#b3ca2d']            },
+  { name: 'gradient-deep-blues',     hex: ['#24206e', '#594f91', '#d4dcf0']            },
+
+  { name: 'gradient-magentas-min',   hex: ['#9a104f', '#e03669']                       },
+  { name: 'gradient-cute-blues-min', hex: ['#00abc3', '#90cef1']                       },
+  { name: 'gradient-oranges-min',    hex: ['#f26522', '#faa21b']                       },
+  { name: 'gradient-greens-min',     hex: ['#006b71', '#639d48']                       },
+  { name: 'gradient-deep-blues-min', hex: ['#24206e', '#594f91']                       },
 ]
 
 for (const color of colors) {
