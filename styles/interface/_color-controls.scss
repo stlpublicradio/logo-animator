@@ -1,8 +1,62 @@
-.color-controls {
-  .color-button {
+#color-controls {
+  display: flex;
+
+  section {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .color-row {
+    margin-bottom: 0.75rem;
+
+    &.is-grouped {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
     background: currentColor;
-    border: none;
+    border: 1px solid rgb(177, 179, 182, 0.5);
     font-size: 0.1px;
     line-height: 0;
+    margin-right: 2px;
+    margin-bottom: 4px;
+
+    height: 40px;
+    width: 40px;
   }
+
+  #color-true-blue        { background: #237bbd; }
+  #color-transparent-blue { background: #234093; }
+  #color-united-purple    { background: #592059; }
+  #color-rigorous-red     { background: #d62021; }
+  #color-curious-coral    { background: #f26a5b; }
+
+  #color-unbiased-black   { background: #000000; }
+  #color-85-black         { background: #231f20; }
+  #color-60-black         { background: #808285; }
+  #color-35-black         { background: #b1b3b6; }
+  #color-10-black         { background: #e6e7e8; }
+  #color-white            { background: #ffffff; }
+
+  #color-magenta          { background: #9a104f; }
+  #color-berry-pink       { background: #e03669; }
+  #color-cute-pink        { background: #fbd4da; }
+
+  #color-popsicle-blue    { background: #00abc3; }
+  #color-sky-blue         { background: #90cef1; }
+  #color-powder-blue      { background: #d4effc; }
+
+  #color-orange           { background: #f26522; }
+  #color-yellow-orange    { background: #faa21b; }
+  #color-yellow           { background: #edd232; }
+
+  #color-forest-green     { background: #006b71; }
+  #color-green            { background: #639d48; }
+  #color-glade-green      { background: #b3ca2d; }
+
+  #color-royal-blue       { background: #24206e; }
+  #color-deep-blue        { background: #594f91; }
+  #color-pale-blue        { background: #d4dcf0; }
 }
