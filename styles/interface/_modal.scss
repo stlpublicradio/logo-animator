@@ -40,8 +40,28 @@
   textarea {
     background-color: #e6e7e8;
     border: none;
+    box-sizing: border-box;
     min-height: 400px;
     max-height: 80vh;
     width: 100%;
+  }
+
+  .copy-control {
+    text-align: right;
+  }
+
+  button#copy-to-clipboard {
+    background: #237bbd;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-right: 0;
+    padding: 0.5rem 1rem;
+    transition: 0.375s;
+    font-size: 1rem;
+
+    &.copied {
+      background: #639d48;
+    }
   }
 }

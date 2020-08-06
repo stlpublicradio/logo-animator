@@ -141,3 +141,20 @@ SVGExport.addEventListener('click', () => {
   const markup = renderMarkup(options)
   console.log(markup)
 })
+
+// Copy Result
+const copyButton = document.querySelector('#copy-to-clipboard')
+const resultArea = document.querySelector('.modal textarea')
+
+copyButton.addEventListener('click', () => {
+  // TODO: Implement Copy Logic
+  
+  resultArea.select()
+  document.execCommand('copy')
+  copyButton.focus()
+
+  copyButton.classList.add('copied')
+  setTimeout(() => {
+    copyButton.classList.remove('copied')
+  }, 1000)
+})
