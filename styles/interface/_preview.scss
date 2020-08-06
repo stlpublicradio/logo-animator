@@ -1,0 +1,41 @@
+.logo-preview {
+  --dark-square: #efebeb;
+  --light-square: #fbfbfb;
+  --square-width: 14px;
+
+  background:
+    linear-gradient(45deg,
+      var(--dark-square) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--dark-square) 75%,
+      var(--dark-square)
+    ),
+    linear-gradient(45deg,
+      var(--dark-square) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--dark-square) 75%,
+      var(--dark-square)
+    ),
+    var(--light-square);
+
+  background-size: var(--square-width) var(--square-width);
+  background-position: 0 0, calc(var(--square-width) / 2) calc(var(--square-width) / 2);
+
+  padding: 3rem 2rem;
+}
+
+.logo-preview.inverse {
+  --dark-square: #191919;
+  --light-square: #272727;
+
+  svg.logo {
+    fill: white;
+  }
+}
+
+.logo-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
