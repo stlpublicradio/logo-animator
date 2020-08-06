@@ -25,6 +25,26 @@ buttonFormWhite.addEventListener('click', () => {
 })
 
 // Animation
+const animationButtons = document.querySelectorAll('#animation-controls button')
+const logo = document.querySelector('svg.logo')
+
+const animations = [
+  { name: 'animation-none', className: ''},
+  { name: 'animation-pulse', className: 'pulse'},
+]
+
+for (const animation of animations) {
+  const button = document.querySelector(`#${animation.name}`)
+  button.addEventListener('click', () => {
+    logo.className = 'logo'
+    logo.classList.add(animation.className)
+
+    animationButtons.forEach(button => {
+      button.classList.remove('active')
+    })
+    button.classList.add('active')
+  })
+}
 
 // Bar Color
 const colorButtons = document.querySelectorAll('#color-controls button')
