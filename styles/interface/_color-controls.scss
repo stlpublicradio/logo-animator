@@ -1,10 +1,18 @@
 #color-controls {
   display: flex;
 
+  @include when-mobile {
+    flex-direction: column;
+  }
+
   section {
     flex-basis: 50%;
     flex-grow: 0;
     flex-shrink: 0;
+
+    @include when-mobile {
+      margin-bottom: 2rem;
+    }
   }
 
   .color-row {
