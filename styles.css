@@ -1,0 +1,15 @@
+@keyframes contract {
+  0%  { transform: rotateX(90deg); }
+  75% { transform: rotateX(0deg);  }
+}
+
+.contract .logo-bar {
+  animation-name: contract;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+
+  fill: url(#gradient-vertical) orange;
+  transform-origin: center center;
+}
