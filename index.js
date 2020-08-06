@@ -1,9 +1,11 @@
 /* eslint-disable no-multi-spaces */
-import { embedLogo, setGradient } from './scripts'
+import { setAnimation, setGradient } from './scripts'
 
 // Set Defaults
-embedLogo('.logo-container', 'pulse') // default animation
-setGradient(['#237bbd'])              // default color
+const logo = document.querySelector('svg.logo')
+
+setAnimation('pulse')    // default animation
+setGradient(['#237bbd']) // default color
 
 // Add Event Listeners to Controls
 
@@ -26,7 +28,6 @@ buttonFormWhite.addEventListener('click', () => {
 
 // Animation
 const animationButtons = document.querySelectorAll('#animation-controls button')
-const logo = document.querySelector('svg.logo')
 
 const animations = [
   { name: 'animation-none', className: ''},
@@ -36,8 +37,7 @@ const animations = [
 for (const animation of animations) {
   const button = document.querySelector(`#${animation.name}`)
   button.addEventListener('click', () => {
-    logo.className = 'logo'
-    logo.classList.add(animation.className)
+    setAnimation(animation.className)
 
     animationButtons.forEach(button => {
       button.classList.remove('active')
