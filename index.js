@@ -142,13 +142,26 @@ SVGExport.addEventListener('click', () => {
   console.log(markup)
 })
 
+// Close Modal
+function closeModal () {
+  document.body.classList.remove('modal-open')
+}
+
+const closeButton = document.querySelector('.modal-close')
+
+closeButton.addEventListener('click', () => {
+  closeModal()
+})
+
+window.addEventListener('keydown', ({key}) => {
+  if (key === 'Escape') closeModal()
+})
+
 // Copy Result
 const copyButton = document.querySelector('#copy-to-clipboard')
 const resultArea = document.querySelector('.modal textarea')
 
 copyButton.addEventListener('click', () => {
-  // TODO: Implement Copy Logic
-  
   resultArea.select()
   document.execCommand('copy')
   copyButton.focus()
