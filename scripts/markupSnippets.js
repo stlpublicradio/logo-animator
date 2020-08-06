@@ -1,12 +1,12 @@
 /* eslint-disable import/prefer-default-export */
 const animationsMarkup = {
-  blink: `
+  blink: mode => `
   @keyframes blink {
     0%  { opacity: 0; }
     33% { opacity: 1; }
   }
   
-  .logo .logo-bar {
+  ${mode === 'HTML' ? '.blink' : '.logo'} .logo-bar {
     animation-name: blink;
     animation-direction: alternate;
     animation-duration: 2s;
@@ -14,13 +14,13 @@ const animationsMarkup = {
     animation-timing-function: ease-out;
   }`,
 
-  pulse: `
+  pulse: mode => `
   @keyframes pulse {
     0%  { transform: rotateX(90deg); }
     75% { transform: rotateX(0deg);  }
   }
   
-  .logo .logo-bar {
+  ${mode === 'HTML' ? '.pulse' : '.logo'} .logo-bar {
     animation-name: pulse;
     animation-direction: alternate;
     animation-duration: 1s;
@@ -30,7 +30,7 @@ const animationsMarkup = {
     transform-origin: center center;
   }`,
 
-  stagger: `
+  stagger: mode => `
   @keyframes stagger-bar1 {
     0%  { transform: rotateX(90deg); }
     9% { transform: rotateX(0deg);  }
@@ -51,7 +51,7 @@ const animationsMarkup = {
     60% { transform: rotateX(0deg);  }
   }
   
-  .logo .logo-bar {
+  ${mode === 'HTML' ? '.stagger' : '.logo'} .logo-bar {
     animation-direction: alternate;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
@@ -60,10 +60,10 @@ const animationsMarkup = {
     transform-origin: center center;
   }
   
-  .logo .logo-bar-1 { animation-name: stagger-bar1; }
-  .logo .logo-bar-2 { animation-name: stagger-bar2; }
-  .logo .logo-bar-3 { animation-name: stagger-bar3; }
-  .logo .logo-bar-4 { animation-name: stagger-bar4; }`,
+  ${mode === 'HTML' ? '.stagger' : '.logo'} .logo-bar-1 { animation-name: stagger-bar1; }
+  ${mode === 'HTML' ? '.stagger' : '.logo'} .logo-bar-2 { animation-name: stagger-bar2; }
+  ${mode === 'HTML' ? '.stagger' : '.logo'} .logo-bar-3 { animation-name: stagger-bar3; }
+  ${mode === 'HTML' ? '.stagger' : '.logo'} .logo-bar-4 { animation-name: stagger-bar4; }`,
 }
 
 export {
