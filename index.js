@@ -1,5 +1,5 @@
 /* eslint-disable no-multi-spaces */
-import { setAnimation, setGradient } from './scripts'
+import { setAnimation, setGradient, renderMarkup } from './scripts'
 
 // Set Defaults
 const features = {
@@ -125,3 +125,19 @@ for (const color of colors) {
     features.colors = color.hex
   })
 }
+
+// Render Markup
+const HTMLExport = document.querySelector('#export-html')
+const SVGExport = document.querySelector('#export-svg')
+
+HTMLExport.addEventListener('click', () => {
+  const options = { ...features, mode: 'HTML'}
+  const markup = renderMarkup(options)
+  console.log(markup)
+})
+
+SVGExport.addEventListener('click', () => {
+  const options = { ...features, mode: 'SVG'}
+  const markup = renderMarkup(options)
+  console.log(markup)
+})
