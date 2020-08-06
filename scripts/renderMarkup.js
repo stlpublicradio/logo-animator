@@ -24,7 +24,7 @@ const renderSVG = options => {
   <svg class="logo" fill="${form}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 35.47">
     <defs>
       <style>
-      ${animationCSS(mode)}
+      ${animationCSS ? animationCSS(mode) : ''}
       </style>
       ${isGradient ? generateGradient(colors) : ''}
     </defs>
@@ -46,7 +46,7 @@ const renderHTML = options => {
 
   return `
   <style>
-  ${animationCSS(mode)}
+  ${animationCSS ? animationCSS(mode) : ''}
   </style>
 
   <svg class="logo ${animation || ''}" fill="${form}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 35.47">

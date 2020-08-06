@@ -8,12 +8,20 @@
   <link rel="stylesheet" href="./styles.scss">
   <script src="index.js" defer></script>
 </head>
-<body>
+<body class="modal-open">
   <svg class="hidden" aria-hidden="true" focusable="false">
     <linearGradient id="gradient-fill" x2="0" y2="1">
       <stop offset="0%" stop-color="currentColor" />
     </linearGradient>
   </svg>
+  
+  <section class="modal-overlay modal-hidden">
+    <figure class="modal">
+      <span class="modal-close">&times;</span>
+      <h1><span class="mode"></span> Markup Has Been Generated</h1>
+      <textarea>&lt;!-- Markup Here --&gt;</textarea>
+    </figure>
+  </section>
 
   <section class="logo-preview">
     <figure class="logo-container">

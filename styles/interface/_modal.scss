@@ -1,0 +1,47 @@
+.modal-open {
+  overflow: hidden;
+
+  .modal-overlay {
+    display: flex;
+  }
+}
+
+.modal-overlay {
+  background-color: rgb(35, 31, 32, 0.75);
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 2rem;
+  position: relative;
+  width: 600px;
+  max-width: 100%;
+
+  .modal-close {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+  }
+
+  h1 {
+    margin-top: 0.5rem;
+  }
+
+  textarea {
+    background-color: #e6e7e8;
+    border: none;
+    min-height: 400px;
+    max-height: 80vh;
+    width: 100%;
+  }
+}

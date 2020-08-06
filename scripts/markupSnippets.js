@@ -33,7 +33,7 @@ const animationsMarkup = {
   stagger: mode => `
   @keyframes stagger-bar1 {
     0%  { transform: rotateX(90deg); }
-    9% { transform: rotateX(0deg);  }
+    9%  { transform: rotateX(0deg);  }
   }
   @keyframes stagger-bar2 {
     0%  { transform: rotateX(90deg); }
@@ -42,12 +42,12 @@ const animationsMarkup = {
   }
   @keyframes stagger-bar3 {
     0%  { transform: rotateX(90deg); }
-    23%  { transform: rotateX(90deg); }
+    23% { transform: rotateX(90deg); }
     41% { transform: rotateX(0deg);  }
   }
   @keyframes stagger-bar4 {
     0%  { transform: rotateX(90deg); }
-    36%  { transform: rotateX(90deg); }
+    36% { transform: rotateX(90deg); }
     60% { transform: rotateX(0deg);  }
   }
   
