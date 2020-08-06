@@ -5,26 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logo Animation Demo</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js"></script>
+  <script src="scripts.js" defer></script>
 </head>
 <body>
-  <svg aria-hidden="true" focusable="false" style="width:0;height:0;position:absolute;">
-    <linearGradient id="gradient-horizontal">
-      <stop offset="0%" stop-color="red" />
-      <stop offset="50%" stop-color="orange" />
-      <stop offset="100%" stop-color="yellow" />
-    </linearGradient>
-    <linearGradient id="gradient-vertical" x2="0" y2="1">
-      <stop offset="0%" stop-color="red" />
-      <stop offset="50%" stop-color="orange" />
-      <stop offset="100%" stop-color="yellow" />
+  <svg class="hidden" aria-hidden="true" focusable="false">
+    <linearGradient id="gradient-fill" x2="0" y2="1">
+      <stop offset="0%" stop-color="currentColor" />
     </linearGradient>
   </svg>
 
   <figure class="logo-container"></figure>
+  <figure class="controls">
+    <legend class="controls-colors">
+      <h3>Colors</h3>
+      <button>Red</button>
+      <button>Blue</button>
+    </legend>
+  </figure>
 
-<script>
-  embedLogo('.logo-container', 'contract')
-</script>
 </body>
 </html>

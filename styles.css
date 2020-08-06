@@ -1,3 +1,11 @@
+.hidden {
+  font-size: 0.1px;
+  line-height: 0;
+  position:absolute;
+  height:0;
+  width:0;
+}
+
 @keyframes contract {
   0%  { transform: rotateX(90deg); }
   75% { transform: rotateX(0deg);  }
@@ -10,6 +18,6 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
 
-  fill: url(#gradient-vertical) orange;
+  fill: url(#gradient-fill) currentColor;
   transform-origin: center center;
 }
