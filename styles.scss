@@ -1,0 +1,16 @@
+@import './styles/animations';
+@import './styles/controls';
+
+.hidden {
+  font-size: 0.1px;
+  line-height: 0;
+  position:absolute;
+  height:0;
+  width:0;
+}
+
+.logo-bar {
+  fill: url(#gradient-fill) currentColor;
+}
+
+

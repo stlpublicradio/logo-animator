@@ -1,23 +1,14 @@
-.hidden {
-  font-size: 0.1px;
-  line-height: 0;
-  position:absolute;
-  height:0;
-  width:0;
-}
-
-@keyframes contract {
+@keyframes pulse {
   0%  { transform: rotateX(90deg); }
   75% { transform: rotateX(0deg);  }
 }
 
-.contract .logo-bar {
-  animation-name: contract;
+.pulse .logo-bar {
+  animation-name: pulse;
   animation-direction: alternate;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
 
-  fill: url(#gradient-fill) currentColor;
   transform-origin: center center;
 }
