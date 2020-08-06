@@ -2,7 +2,14 @@
 import { setAnimation, setGradient } from './scripts'
 
 // Set Defaults
-setAnimation('pulse')    // default animation
+const features = {
+  animation: 'stagger',
+  colors: ['#237bbd'],
+  form: 'black',
+}
+window.features = features
+
+setAnimation('stagger')  // default animation
 setGradient(['#237bbd']) // default color
 
 // Add Event Listeners to Controls
@@ -16,12 +23,16 @@ buttonFormBlack.addEventListener('click', () => {
   preview.classList.remove('inverse')
   buttonFormWhite.classList.remove('active')
   buttonFormBlack.classList.add('active')
+
+  features.form = 'black'
 })
 
 buttonFormWhite.addEventListener('click', () => {
   preview.classList.add('inverse')
   buttonFormBlack.classList.remove('active')
   buttonFormWhite.classList.add('active')
+
+  features.form = 'white'
 })
 
 // Animation
@@ -31,6 +42,7 @@ const animations = [
   { name: 'animation-none', className: ''},
   { name: 'animation-blink', className: 'blink'},
   { name: 'animation-pulse', className: 'pulse'},
+  { name: 'animation-stagger', className: 'stagger'},
 ]
 
 for (const animation of animations) {
@@ -42,6 +54,8 @@ for (const animation of animations) {
       button.classList.remove('active')
     })
     button.classList.add('active')
+
+    features.animation = animation.className
   })
 }
 
@@ -107,5 +121,7 @@ for (const color of colors) {
       button.classList.remove('active')
     })
     button.classList.add('active')
+
+    features.colors = color.hex
   })
 }
