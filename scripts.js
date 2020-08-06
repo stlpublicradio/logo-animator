@@ -14,7 +14,7 @@ const embedLogo = (selector, className = '') => {
   element.insertAdjacentHTML('afterbegin', makeLogo(className))
 }
 
-const generateColorStops = (colors) => {
+const generateColorStops = colors => {
   const offsetIncrement = Math.round((100 / colors.length - 1) || 0)
   return colors
     .map((stop, index) => (
@@ -23,10 +23,11 @@ const generateColorStops = (colors) => {
     .join('\n')
 }
 
-const setGradient = (colors) => {
+const setGradient = colors => {
   const gradient = document.querySelector('#gradient-fill')
   gradient.innerHTML = generateColorStops(colors)
 }
 
 // Let's begin
 embedLogo('.logo-container', 'contract')
+setGradient(['red', 'orange', 'yellow'])
