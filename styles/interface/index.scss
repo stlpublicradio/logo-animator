@@ -1,2 +1,11 @@
 @import 'color-controls';
+@import 'logo-form-controls';
 @import 'preview';
+
+button {
+  margin-right: 0.25rem;
+}
+
+button.active {
+  box-shadow: 0 0 0 3px #237bbd;
+}

@@ -1,0 +1,45 @@
+#logo-form-controls {
+  button {
+    border: 1px solid #b1b3b6;
+    border-radius: 4px;
+    padding: 6px 2px;
+  }
+
+  img {
+    width: 70px;
+  }
+
+  #form-black, #form-white {
+    --square-width: 6px;
+
+    background:
+      linear-gradient(45deg,
+        var(--dark-square) 25%,
+        transparent 25%,
+        transparent 75%,
+        var(--dark-square) 75%,
+        var(--dark-square)
+      ),
+      linear-gradient(45deg,
+        var(--dark-square) 25%,
+        transparent 25%,
+        transparent 75%,
+        var(--dark-square) 75%,
+        var(--dark-square)
+      ),
+      var(--light-square);
+
+    background-size: var(--square-width) var(--square-width);
+    background-position: 0 0, calc(var(--square-width) / 2) calc(var(--square-width) / 2);
+  }
+
+  #form-black {
+    --dark-square: #efebeb;
+    --light-square: #fbfbfb;
+  }
+
+  #form-white {
+    --dark-square: #191919;
+    --light-square: #272727;
+  }
+}
