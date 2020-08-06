@@ -67,4 +67,19 @@
   #color-royal-blue       { background: #24206e; }
   #color-deep-blue        { background: #594f91; }
   #color-pale-blue        { background: #d4dcf0; }
+
+  #gradient-blues         { background: linear-gradient(180deg, #237bbd, #234093); }
+  #gradient-cools         { background: linear-gradient(180deg, #237bbd, #234093, #592059); }
+  #gradient-warms         { background: linear-gradient(180deg, #592059, #d62021, #f26a5b); }
+  #gradient-reds          { background: linear-gradient(180deg, #d62021, #f26a5b); }
+
+  #gradient-dark-grey     { background: linear-gradient(180deg, #000000, #231f20, #808285); }
+  #gradient-mid-grey      { background: linear-gradient(180deg, #231f20, #808285, #b1b3b6, #e6e7e8); }
+  #gradient-light-grey    { background: linear-gradient(180deg, #b1b3b6, #e6e7e8, #ffffff); }
+
+  #gradient-magentas      { background: linear-gradient(180deg, #9a104f, #e03669, #fbd4da); }
+  #gradient-cute-blues    { background: linear-gradient(180deg, #00abc3, #90cef1, #d4effc); }
+  #gradient-oranges       { background: linear-gradient(180deg, #f26522, #faa21b, #edd232); }
+  #gradient-greens        { background: linear-gradient(180deg, #006b71, #639d48, #b3ca2d); }
+  #gradient-deep-blues    { background: linear-gradient(180deg, #24206e, #594f91, #d4dcf0); }
 }

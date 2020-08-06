@@ -28,36 +28,51 @@ buttonFormWhite.addEventListener('click', () => {
 const colorButtons = document.querySelectorAll('#color-controls button')
 
 const colors = [
-  { name: 'true-blue',        hex: ['#237bbd'] },
-  { name: 'transparent-blue', hex: ['#234093'] },
-  { name: 'united-purple',    hex: ['#592059'] },
-  { name: 'rigorous-red',     hex: ['#d62021'] },
-  { name: 'curious-coral',    hex: ['#f26a5b'] },
-  { name: 'unbiased-black',   hex: ['#000000'] },
-  { name: '85-black',         hex: ['#231f20'] },
-  { name: '60-black',         hex: ['#808285'] },
-  { name: '35-black',         hex: ['#b1b3b6'] },
-  { name: '10-black',         hex: ['#e6e7e8'] },
-  { name: 'white',            hex: ['#ffffff'] },
-  { name: 'magenta',          hex: ['#9a104f'] },
-  { name: 'berry-pink',       hex: ['#e03669'] },
-  { name: 'cute-pink',        hex: ['#fbd4da'] },
-  { name: 'popsicle-blue',    hex: ['#00abc3'] },
-  { name: 'sky-blue',         hex: ['#90cef1'] },
-  { name: 'powder-blue',      hex: ['#d4effc'] },
-  { name: 'orange',           hex: ['#f26522'] },
-  { name: 'yellow-orange',    hex: ['#faa21b'] },
-  { name: 'yellow',           hex: ['#edd232'] },
-  { name: 'forest-green',     hex: ['#006b71'] },
-  { name: 'green',            hex: ['#639d48'] },
-  { name: 'glade-green',      hex: ['#b3ca2d'] },
-  { name: 'royal-blue',       hex: ['#24206e'] },
-  { name: 'deep-blue',        hex: ['#594f91'] },
-  { name: 'pale-blue',        hex: ['#d4dcf0'] },
+  { name: 'color-true-blue',        hex: ['#237bbd'] },
+  { name: 'color-transparent-blue', hex: ['#234093'] },
+  { name: 'color-united-purple',    hex: ['#592059'] },
+  { name: 'color-rigorous-red',     hex: ['#d62021'] },
+  { name: 'color-curious-coral',    hex: ['#f26a5b'] },
+  { name: 'color-unbiased-black',   hex: ['#000000'] },
+  { name: 'color-85-black',         hex: ['#231f20'] },
+  { name: 'color-60-black',         hex: ['#808285'] },
+  { name: 'color-35-black',         hex: ['#b1b3b6'] },
+  { name: 'color-10-black',         hex: ['#e6e7e8'] },
+  { name: 'color-white',            hex: ['#ffffff'] },
+  { name: 'color-magenta',          hex: ['#9a104f'] },
+  { name: 'color-berry-pink',       hex: ['#e03669'] },
+  { name: 'color-cute-pink',        hex: ['#fbd4da'] },
+  { name: 'color-popsicle-blue',    hex: ['#00abc3'] },
+  { name: 'color-sky-blue',         hex: ['#90cef1'] },
+  { name: 'color-powder-blue',      hex: ['#d4effc'] },
+  { name: 'color-orange',           hex: ['#f26522'] },
+  { name: 'color-yellow-orange',    hex: ['#faa21b'] },
+  { name: 'color-yellow',           hex: ['#edd232'] },
+  { name: 'color-forest-green',     hex: ['#006b71'] },
+  { name: 'color-green',            hex: ['#639d48'] },
+  { name: 'color-glade-green',      hex: ['#b3ca2d'] },
+  { name: 'color-royal-blue',       hex: ['#24206e'] },
+  { name: 'color-deep-blue',        hex: ['#594f91'] },
+  { name: 'color-pale-blue',        hex: ['#d4dcf0'] },
+
+  { name: 'gradient-blues',         hex: ['#237bbd', '#234093']                       },
+  { name: 'gradient-cools',         hex: ['#237bbd', '#234093', '#592059']            },
+  { name: 'gradient-warms',         hex: ['#592059', '#d62021', '#f26a5b']            },
+  { name: 'gradient-reds',          hex: ['#d62021', '#f26a5b']                       },
+
+  { name: 'gradient-dark-grey',     hex: ['#000000', '#231f20', '#808285']            },
+  { name: 'gradient-mid-grey',      hex: ['#231f20', '#808285', '#b1b3b6', '#e6e7e8'] },
+  { name: 'gradient-light-grey',    hex: ['#b1b3b6', '#e6e7e8', '#ffffff']            },
+
+  { name: 'gradient-magentas',      hex: ['#9a104f', '#e03669', '#fbd4da']            },
+  { name: 'gradient-cute-blues',    hex: ['#00abc3', '#90cef1', '#d4effc']            },
+  { name: 'gradient-oranges',       hex: ['#f26522', '#faa21b', '#edd232']            },
+  { name: 'gradient-greens',        hex: ['#006b71', '#639d48', '#b3ca2d']            },
+  { name: 'gradient-deep-blues',    hex: ['#24206e', '#594f91', '#d4dcf0']            },
 ]
 
 for (const color of colors) {
-  const button = document.querySelector(`#color-${color.name}`)
+  const button = document.querySelector(`#${color.name}`)
   button.addEventListener('click', () => {
     setGradient(color.hex)
 
