@@ -1,0 +1,41 @@
+@keyframes stagger-bar1 {
+  0%  { transform: rotateX(90deg); }
+  9% { transform: rotateX(0deg);  }
+}
+@keyframes stagger-bar2 {
+  0%  { transform: rotateX(90deg); }
+  4%  { transform: rotateX(90deg); }
+  23% { transform: rotateX(0deg);  }
+}
+@keyframes stagger-bar3 {
+  0%  { transform: rotateX(90deg); }
+  23%  { transform: rotateX(90deg); }
+  41% { transform: rotateX(0deg);  }
+}
+@keyframes stagger-bar4 {
+  0%  { transform: rotateX(90deg); }
+  36%  { transform: rotateX(90deg); }
+  60% { transform: rotateX(0deg);  }
+}
+
+.stagger .logo-bar {
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+
+  transform-origin: center center;
+}
+
+.stagger .logo-bar-1 {
+  animation-name: stagger-bar1
+}
+.stagger .logo-bar-2 {
+  animation-name: stagger-bar2
+}
+.stagger .logo-bar-3 {
+  animation-name: stagger-bar3
+}
+.stagger .logo-bar-4 {
+  animation-name: stagger-bar4
+}
