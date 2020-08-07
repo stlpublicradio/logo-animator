@@ -23,9 +23,11 @@ const renderSVG = options => {
   return `
   <svg class="logo" fill="${form}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 35.47">
     <defs>
+      ${animationCSS ? `
       <style>
-      ${animationCSS ? animationCSS(mode) : ''}
-      </style>
+      ${animationCSS(mode)}
+      </style>`
+      : ''}
       ${isGradient ? generateGradient(colors) : ''}
     </defs>
     <g fill="${isGradient ? 'url(#gradient-fill)' : firstColor}">
@@ -45,9 +47,11 @@ const renderHTML = options => {
   const [firstColor] = colors
 
   return `
+  ${animationCSS ? `
   <style>
-  ${animationCSS ? animationCSS(mode) : ''}
-  </style>
+  ${animationCSS(mode)}
+  </style>`
+  : ''}
 
   <svg class="logo ${animation || ''}" fill="${form}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 35.47">
     ${isGradient ? `<defs>${generateGradient(colors)}</defs>` : ''}
