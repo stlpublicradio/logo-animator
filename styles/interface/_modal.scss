@@ -51,7 +51,7 @@
     text-align: right;
   }
 
-  button#copy-to-clipboard {
+  button {
     background: #237bbd;
     color: white;
     font-weight: bold;
@@ -60,9 +60,9 @@
     padding: 0.5rem 1rem;
     transition: 0.375s;
     font-size: 1rem;
-
-    &.copied {
-      background: #639d48;
-    }
+  }
+  
+  button#copy-to-clipboard.copied {
+    background: #639d48;
   }
 }

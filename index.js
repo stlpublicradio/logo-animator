@@ -1,5 +1,6 @@
+/* eslint-disable unicorn/prefer-add-event-listener */
 /* eslint-disable no-multi-spaces */
-import { setAnimation, setGradient, renderMarkup } from './scripts'
+import { setAnimation, setGradient, renderMarkup, download } from './scripts'
 
 // Set Defaults
 const features = {
@@ -127,19 +128,33 @@ for (const color of colors) {
 }
 
 // Render Markup
+const resultArea = document.querySelector('.modal textarea')
+const modalHeading = document.querySelector('.modal h1')
+
+function launchModal (title, contents) {
+  modalHeading.textContent = title
+  resultArea.textContent = contents
+  document.body.classList.add('modal-open')
+}
+
 const HTMLExport = document.querySelector('#export-html')
 const SVGExport = document.querySelector('#export-svg')
+const downloadButton = document.querySelector('#download-markup')
 
 HTMLExport.addEventListener('click', () => {
-  const options = { ...features, mode: 'HTML'}
-  const markup = renderMarkup(options)
-  console.log(markup)
+  const contents = renderMarkup({ ...features, mode: 'HTML'})
+  launchModal('HTML Markup', contents)
+  downloadButton.onclick = () => {
+    download('animated-logo.html', contents)
+  }
 })
 
 SVGExport.addEventListener('click', () => {
-  const options = { ...features, mode: 'SVG'}
-  const markup = renderMarkup(options)
-  console.log(markup)
+  const contents = renderMarkup({ ...features, mode: 'SVG'})
+  launchModal('SVG Markup', contents)
+  downloadButton.onclick = () => {
+    download('animated-logo.svg', contents)
+  }
 })
 
 // Close Modal
@@ -159,7 +174,6 @@ window.addEventListener('keydown', ({key}) => {
 
 // Copy Result
 const copyButton = document.querySelector('#copy-to-clipboard')
-const resultArea = document.querySelector('.modal textarea')
 
 copyButton.addEventListener('click', () => {
   resultArea.select()
